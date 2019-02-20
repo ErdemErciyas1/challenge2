@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+         <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
+<script>
+  function validateEmail(email) 
+{
+    var re = /\S+@\S+/;
+    return re.test(email);
+}
+
+function val(){
+  if(frm.phone.value==""){
+    alert("Please enter the phone number");
+frm.phone.focus();
+return false;
+  }
+  if (isNaN(frm.phone.value))
+  {
+    alert("invalid phone number")
+    frm.phone.focus();
+    return false;
+  }
+  if(frm.phone.value).length<10)
+  {
+
+  }
+
+}
+
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  var e = document.forms["myForm"]["email"].value;
+  if (e == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+  var e = document.forms["myForm"]["number"].value;
+  if (e == "") {
+    alert("Number must be filled out");
+    return false;
+  }
+  var z = document.forms["myForm"]["zipcode"].value;
+  if (z == "") {
+    alert("Zipcode must be filled out");
+    return false;
+  }
+  var p = document.forms["myForm"]["password"].value;
+  if (p == "") {
+    alert("Password must be filled out");
+    return false;
+  }
+  var g = document.forms["myForm"]["gender"].value;
+  if (g == "") {
+    alert("Gender must be clicked on");
+    return false;
+  }
+}
+
+</script>
+</head>
+<body>
+  <div class="container">
+      <div class="col-lg-6 m-auto d-block">
+
+<form name="myForm" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname" class='form-control'>
+  E-mail: <input type="email" class="form-control" placeholder="Your primary email address" name="email">
+  Phone number: <input type="text" class="form-control"  name="number">
+  Zip Code: <input type="text" class="form-control" name="zipcode">
+  Password: <input type="password"  class="form-control" name="password">
+  Gender:<br> 
+  <input type="radio" name="gender" value="female">Female
+  <input type="radio" name="gender" value="male">Male
+  <br>
+  
+  <br>
+  <input type="submit" value="Submit">
+</form>
+</div>
+</div>
+</body>
+</html>
