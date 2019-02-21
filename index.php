@@ -22,7 +22,8 @@
 
     
     <div class= "container">
-    <h2>PHP Validation</h2>
+    <div class="col-lg-6 m-auto d-block">
+    <h2 class="text-primary">PHP Validation</h2>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
   
     
